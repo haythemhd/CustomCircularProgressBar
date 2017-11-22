@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CustomProgress</string>
+    <string name="charger">Charger l\'Image</string>
+    <string name="try_to_download">try to download a big image</string>
+    <string name="charger_avec_picasso">Charger avec Picasso</string>
+</resources>

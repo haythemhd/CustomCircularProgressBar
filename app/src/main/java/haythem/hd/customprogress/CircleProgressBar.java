@@ -87,6 +87,7 @@ public class CircleProgressBar extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+
         super.onDraw(canvas);
         Log.i("onDraw", "onDraw");
         canvas.drawArc(rectF, 0, 360, false, mBackgroundPaint);

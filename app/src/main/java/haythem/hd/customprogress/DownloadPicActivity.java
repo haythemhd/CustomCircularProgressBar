@@ -23,7 +23,7 @@ public class DownloadPicActivity extends AppCompatActivity {
 
     private ImageView mImageView;
     private Button mLoadImage;
-    private  Button mLoadPicasso;
+    private Button mLoadPicasso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class DownloadPicActivity extends AppCompatActivity {
                 int width = bmImage.getWidth();
 
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                InputStream inputStream =httpURLConnection.getInputStream();
+                InputStream inputStream = httpURLConnection.getInputStream();
 
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inJustDecodeBounds = true;
@@ -84,10 +84,9 @@ public class DownloadPicActivity extends AppCompatActivity {
                 InputStream inputStream1 = httpURLConnection1.getInputStream();
 
                 result = BitmapFactory.decodeStream(inputStream1, null, options);
-            }catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 Log.e("Error", e.getMessage());
                 e.printStackTrace();
             }

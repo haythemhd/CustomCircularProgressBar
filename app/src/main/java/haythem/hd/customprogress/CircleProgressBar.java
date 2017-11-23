@@ -20,7 +20,6 @@ public class CircleProgressBar extends View {
     private float mStrokeWidth = 3;
     private float progress = 0;
 
-    private int mStartAngle = -90;
     private int mColor = Color.CYAN;
     private int mProgressColor = Color.BLUE;
 
@@ -92,16 +91,16 @@ public class CircleProgressBar extends View {
         Log.i("onDraw", "onDraw");
         canvas.drawArc(rectF, 0, 360, false, mBackgroundPaint);
         float angle = 360 * progress / 100;
+        int mStartAngle = -90;
         canvas.drawArc(rectF, mStartAngle, angle, false, mForegroundPaint);
         Rect bounds = new Rect();
-
         mTextPaint.getTextBounds(String.format("%.00f", progress), 0, String.format("%.00f", progress).length(), bounds);
-
         canvas.drawText(String.format("%.00f", progress) + " %", rectF.centerX(), rectF.centerY() + bounds.height() / 2, mTextPaint);
+
     }
 
     public void setProgress(float mProgress) {
-        this.progress = mProgress;
+        progress = mProgress;
         invalidate();
     }
 

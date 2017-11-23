@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.add_btn:
                 circleProgressBar.AddTenWithAnimation(this.getApplicationContext());
-                break;
+            break;
             case R.id.set_btn:
                 Toast.makeText(getApplicationContext(), "Change progress", Toast.LENGTH_LONG).show();
                 circleProgressBar.setProgress(Float.parseFloat(poucentageEditText.getText().toString()));

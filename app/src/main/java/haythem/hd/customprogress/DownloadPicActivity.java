@@ -59,8 +59,8 @@ public class DownloadPicActivity extends AppCompatActivity {
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
-        private DownloadImageTask(ImageView bmImage) {
-            this.bmImage = bmImage;
+        private DownloadImageTask(ImageView image) {
+            bmImage = image;
         }
 
         protected Bitmap doInBackground(String... urls) {
